@@ -107,11 +107,11 @@ function Comment(props) {
 
   useEffect(() => {
     dispatch(loadComments(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   useEffect(() => {
     dispatch(loadClaim(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   return (
     <div>
