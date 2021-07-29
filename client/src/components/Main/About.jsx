@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 function About(props) {
   const classes = useStyles();
   return (
-    <div className={classes.aboutDiv}>
+    <div>
       <h3>Контактная информация:</h3>
       <div className={classes.about}>
         <div>

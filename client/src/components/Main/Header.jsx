@@ -56,7 +56,7 @@ function Header(props) {
           />
           <h1>Администрация г.Магас</h1>
           <nav className={classes.headerNav}>
-            <NavLink className={isActive("/")} style={{ color: "#C0C0C0", textDecoration: "none"}} to="/">
+            <NavLink className={isActive("/home")} style={{ color: "#C0C0C0", textDecoration: "none"}} to="/home">
               <RiHome3Line/>
             </NavLink>
             <NavLink

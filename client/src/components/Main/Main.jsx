@@ -21,7 +21,7 @@ function Main(props) {
     <div className={classes.main}>
       <Container className={classes.main}>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/home">
             <Home />
           </Route>
           <Route path="/admin">
