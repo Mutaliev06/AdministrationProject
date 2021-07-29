@@ -60,7 +60,7 @@ export const loadStatus = () => {
       type: 'status/load/pending'
     })
 
-    const response = await fetch('http://localhost:5000/status')
+    const response = await fetch('/status')
     const json = await response.json();
       dispatch({
         type: 'status/load/fulfilled',
@@ -72,7 +72,7 @@ export const loadStatus = () => {
 export const postStatus = ( data ) => {
   return async (dispatch) => {
     dispatch({ type: "status/create/pending" });
-    const response = await fetch("http://localhost:5000/status", {
+    const response = await fetch("/status", {
       method: "POST",
       headers: {
         Accept: "application/json",

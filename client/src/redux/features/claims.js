@@ -54,7 +54,7 @@ export const loadClaims = () => {
     dispatch({
       type: "claims/load/pending",
     });
-    const response = await fetch("http://localhost:5000/");
+    const response = await fetch("/home");
     const json = await response.json();
     dispatch({
       type: "claims/load/fulfilled",
@@ -69,7 +69,7 @@ export const loadClaim = (id) => {
       type: "claims/load/pending",
     });
 
-    const response = await fetch(`http://localhost:5000/claim/${id}/comment`);
+    const response = await fetch(`/claim/${id}/comment`);
     const json = await response.json();
 
     dispatch({
@@ -84,7 +84,7 @@ export const removeClaim = (id) => {
     dispatch({
       type: "claims/remove/pending",
     });
-    await fetch(`http://localhost:5000/claim/${id}`, {
+    await fetch(`/claim/${id}`, {
       method: "DELETE",
     });
     dispatch({
@@ -97,7 +97,7 @@ export const removeClaim = (id) => {
 export const postClaim = (data) => {
   return async (dispatch) => {
     dispatch({ type: "claim/create/pending" });
-    const response = await fetch("http://localhost:5000/admin/claim", {
+    const response = await fetch("/admin/claim", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

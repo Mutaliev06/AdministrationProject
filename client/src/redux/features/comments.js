@@ -67,7 +67,7 @@ export const loadComments = (id) => {
       type: 'comments/load/pending'
     })
 
-    const response = await fetch(`http://localhost:5000/claim/${id}/comment`)
+    const response = await fetch(`/claim/${id}/comment`)
     const json = await response.json();
       dispatch({
         type: 'comments/load/fulfilled',
@@ -79,7 +79,7 @@ export const loadComments = (id) => {
 export const postComment = (id, comment) => {
   return async (dispatch) => {
     dispatch({ type: "comment/create/pending" });
-    const response = await fetch(`http://localhost:5000/claim/${id}/comment`, {
+    const response = await fetch(`/claim/${id}/comment`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -102,7 +102,7 @@ export const editComment = (id, data) => {
   return async (dispatch) => {
     dispatch({ type: "comment/edit/pending" });
 
-    await fetch(`http://localhost:5000/claim/${id}/comment`, {
+    await fetch(`/claim/${id}/comment`, {
       method: "PATCH",
       body: JSON.stringify({
         status: data.stat,
