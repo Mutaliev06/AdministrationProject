@@ -115,6 +115,7 @@ function Home(props) {
               <Table className={classes.table} aria-label="customized table">
                 <TableHead className={classes.tableHead}>
                   <TableRow className={classes.tableRow}>
+                    <TableCell className={classes.tableCell}></TableCell>
                     <TableCell className={classes.tableCell}>
                       Описание
                     </TableCell>
