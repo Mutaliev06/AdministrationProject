@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -5,7 +6,6 @@ const router = require("./routers/index");
 const morgan = require("morgan");
 
 const app = express();
-const { port, url } = require("./config/index");
 const path = require('path');
 
 app.use(cors());
@@ -23,11 +23,11 @@ app.get('*', (req, res) => {
 
 async function start() {
   try {
-    await mongoose.connect(url, {
+    await mongoose.connect(process.env.MONGODB, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    app.listen(port, () => {
+    app.listen(process.env.PORT, () => {
       console.log("Сервер и БД запущены...");
     });
   } catch (e) {

@@ -15,7 +15,7 @@ import { loadComments, postComment } from "../../redux/features/comments";
 import { useParams } from "react-router-dom";
 import { loadStatus } from "../../redux/features/status";
 import dayjs from "dayjs";
-import CommentEdit from "../CommentEdit/commentEdit";
+import CommentEdit from "./CommentEdit";
 
 const useStyles = makeStyles({
   table: {

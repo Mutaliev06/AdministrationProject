@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     color: "white",
   },
   footer: {
-    marginTop: "200px",
+    marginTop: "20px",
     color: "#fff",
     backgroundColor: "#3f51b5"
   },

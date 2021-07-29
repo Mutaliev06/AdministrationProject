@@ -1,17 +1,16 @@
 import React from "react";
 import { Container } from "@material-ui/core";
-import Home from "../Home";
+import Home from "./Home";
 import { Route, Switch } from "react-router-dom";
-import Admin from "../Admin";
-import About from "../About";
-import NotFound from "../NotFound";
-import Status from "../Status";
-import Comment from "../Comment";
+import Admin from "./Admin";
+import About from "./About";
+import NotFound from "../NotFound/NotFound";
+import Status from "./Status";
+import Comment from "./Comment";
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   main: {
-    height: "100vh",
     margin: "0 auto"
   }
 })
